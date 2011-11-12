@@ -1,0 +1,66 @@
+**************************************
+  Javascript Modular Logging Library
+**************************************
+ * Copyright 2011, Jarod Law Ding Yong <dingyong.law@gmail.com>
+ * Dual licensed under the MIT or GNU GPL Version 3 licenses.
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+
+
+This logger is different from other loggers available on the net.
+It allows you to setup a specific logger for a module, and collect logs history.
+It comes with a logger level too.
+
+The logging method is exactly the same as your browser native console, or firebug if you have one.
+
+
+==============
+Example Usage:
+==============
+
+Logging:
+--------
+
+// Register a module logger, p is now logger for 'App.Login'
+var p = JSLog.Register('App.Login');
+
+// Log something, and it will display "[App.Login] something" in your console;
+p.log('something');
+
+// You can do something as usual:
+p.warn('warning!');
+p.info('info msg');
+
+
+Log Level:
+----------
+The Logger comes with 5 level of logging access: 1-5
+which coresponding to: 'error', 'warn', 'info', 'debug', 'log'
+
+// You can set your level like this, to display only info message in console
+p.SetLevel(3);
+
+// You can get your current logging level with:
+p.GetLevel();
+
+
+Logging History:
+----------------
+The logger records your logs and you can Dump it later!
+
+// Dump by Module Name
+JSLog.Dump('App.Login');
+
+// Dump all modules in nested view
+JSLog.Dump();
+
+// Selective Dump by filtering module name:
+JSLog.SetFilter('module-name');
+JSLog.Dump();  // Will exclude 'module-name' module
+
+// Clear filter by module name:
+JSLog.UnsetFilter('module-name');
+
+// Get assigned filters
+JSLog.GetFilter();
+
