@@ -12,7 +12,8 @@ It allows you to setup a specific logger for a module, and collect logs history.
 It comes with a logger level too.
 
 The logging method is exactly the same as your browser native console, or firebug if you have one.
-
+Supporting Browser: Any Browser with console
+*Tips: use firebug-lite if you want a nice view in old browser.
 
 ==============
 Example Usage:
