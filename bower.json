@@ -1,0 +1,7 @@
+{
+  "name": "JSLog",
+  "version": "0.0.1",
+  "main": "./v1.1/JSLog.js",
+  "dependencies": {
+  }
+}
