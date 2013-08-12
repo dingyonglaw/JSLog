@@ -1,4 +1,4 @@
-LOG JavaScript Logging Library
+/* JSLOG JavaScript Logging Library
  *
  * Copyright 2011, Jarod Law Ding Yong
  * Dual licensed under the MIT or GNU GPL Version 3 licenses.
